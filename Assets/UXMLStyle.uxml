@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/StyleUI.uss?fileID=7433441132597879392&amp;guid=05db564d26ed341e8a628c3a87cd0030&amp;type=3#StyleUI" />
+    <ui:VisualElement name="Frame" style="flex-grow: 1; flex-direction: column-reverse; justify-content: space-between;">
+        <ui:GroupBox name="InputSave" style="flex-grow: 0.2; flex-shrink: 0; flex-direction: column; justify-content: flex-end; align-items: stretch; margin-top: 0; padding-top: 0;">
+            <ui:IMGUIContainer name="Container" style="-unity-background-image-tint-color: rgb(130, 126, 126); flex-grow: initial; background-color: rgba(248, 0, 0, 0.5); flex-shrink: initial; align-items: stretch; justify-content: space-around; height: initial; width: initial; flex-basis: auto; -unity-background-scale-mode: stretch-to-fill; border-left-color: rgb(89, 34, 34); border-right-color: rgb(89, 34, 34); border-top-color: rgb(89, 34, 34); border-bottom-color: rgb(89, 34, 34); margin-top: 0; -unity-text-outline-width: 0; padding-right: 10%; padding-left: 10%; padding-bottom: 1%; margin-left: 5%; margin-right: 5%; padding-top: 1%;">
+                <ui:TextField picking-mode="Ignore" label="Set seed" value="0" text="Input text" name="Input" max-length="9" style="flex-shrink: 1; flex-grow: 0; height: initial; margin-top: 10px; font-size: 60%; margin-left: 0; margin-right: 0; margin-bottom: 10px;" />
+                <ui:VisualElement name="ContainerButton" style="flex-basis: auto; margin-left: 0; margin-right: 0; justify-content: space-between; flex-direction: row; margin-top: 5px; margin-bottom: 0; align-items: center; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-grow: 0; height: auto;">
+                    <ui:Button text="New" display-tooltip-when-elided="true" name="New" style="margin-left: 4px; margin-right: 4px; margin-top: 2px; margin-bottom: 2px; flex-basis: 25%; height: auto; font-size: 35%;" />
+                    <ui:Button text="Load" display-tooltip-when-elided="true" name="Load" style="margin-left: 4px; margin-right: 4px; margin-top: 2px; margin-bottom: 2px; flex-basis: 25%; height: auto; font-size: 35%;" />
+                    <ui:Button text="Save" display-tooltip-when-elided="true" name="Save" style="margin-left: 4px; margin-right: 4px; margin-top: 2px; margin-bottom: 2px; flex-basis: 25%; height: auto; font-size: 35%;" />
+                    <ui:Button text="Delete" display-tooltip-when-elided="true" name="Delete" style="margin-left: 4px; margin-right: 4px; margin-top: 2px; margin-bottom: 2px; flex-basis: 25%; height: auto; font-size: 35%;" />
+                </ui:VisualElement>
+            </ui:IMGUIContainer>
+        </ui:GroupBox>
+        <ui:ScrollView name="SaveList" style="justify-content: flex-start; flex-basis: 30%; margin-left: 3%; margin-right: 3%; margin-top: 0; padding-top: 0; font-size: 59%; flex-direction: column; display: flex;" />
+    </ui:VisualElement>
+</ui:UXML>
