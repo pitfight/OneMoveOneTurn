@@ -8,7 +8,7 @@ public class LevelMenager : MonoBehaviour
     private const string LEVEL_SAVE = "LEVEL_SAVE"; 
     [SerializeField] private int width = 4;
     [SerializeField] private int height = 10;
-    [SerializeField] private float cellSize = 10f;
+    private const float cellSize = 2f;
     [SerializeField] private LevelGenerator levelGenerator;
 
     [Header("Parent Text")]
@@ -21,6 +21,9 @@ public class LevelMenager : MonoBehaviour
 
     private void Awake()
     {
+        if (width % 2 == 0) width += 1;
+        if (height % 2 == 0) height += 1;
+
         grid = new Grid<PathNode>(parentText, width, height, cellSize, Vector2.zero, (Grid<PathNode> grid, int x, int y) => new PathNode(grid, x, y));
 
         pathFinder = new Pathfinding(grid, Pathfinding.PathfindingType.Route4);

@@ -15,6 +15,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private RuleTile ruleTileWalls;
     [SerializeField] private Tile[] tilesGround;
+    [SerializeField] private GameObject wallCollider;
+    [SerializeField] private Transform wallColliderParent;
 
     public void SpawnTiles(Vector2[] coordinates, TylesType tylesType, int seed = 0)
     {
@@ -24,6 +26,7 @@ public class LevelGenerator : MonoBehaviour
             foreach (var coor in coordinates)
             {
                 var vec = new Vector3Int((int)coor.x, (int)coor.y, 0);
+                Instantiate(wallCollider, vec, Quaternion.identity, wallColliderParent);
                 //tileBase.ru
                 tilemap.SetTile(vec, ruleTileWalls);
                 vec = new Vector3Int((int)coor.x - 1, (int)coor.y - 1, 0);

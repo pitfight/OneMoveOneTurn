@@ -21,9 +21,6 @@ public class UIController : MonoBehaviour
 
     private void Start()
     {
-        //var uiDocument = GetComponent<UIDocument>().rootVisualElement;
-        //var rootVisualElement = uiDocument.rootVisualElement;
-
         var frame = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Frame");
 
         scrollViewSaves = frame.Q<ScrollView>("SaveList");
@@ -40,8 +37,6 @@ public class UIController : MonoBehaviour
         buttonDelete.clicked += DeleteSave;
 
         radioButtons = new List<RadioButton>(10);
-
-        Debug.Log(radioButtons.Count);
     }
 
     public void NewLevel()

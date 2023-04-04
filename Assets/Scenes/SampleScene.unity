@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &172994999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,9 +610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a51aed87273c4cf59c170577668fbc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 111
-  height: 111
-  cellSize: 2
+  width: 10
+  height: 10
   levelGenerator: {fileID: 1568118068}
   parentText: {fileID: 634058974}
 --- !u!114 &1568118068
@@ -643,6 +642,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a291b3dd99e364c45a4717e5e3f9c83a, type: 2}
   - {fileID: 11400000, guid: a662de04b45489842ad738aa7469ac67, type: 2}
   - {fileID: 11400000, guid: ce8970402034b5c41851cb3b5e7a3036, type: 2}
+  wallCollider: {fileID: 784492715980605989, guid: 62f61f99804c441b3aae17ae8b9ecf44, type: 3}
+  wallColliderParent: {fileID: 1923923612}
 --- !u!114 &1568118069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,3 +656,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ac19aa5d22d4e12945d34944ce2604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1923923611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923923612}
+  m_Layer: 0
+  m_Name: WallColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923923612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923923611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.05538, y: 5.938905, z: 0.15016027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
